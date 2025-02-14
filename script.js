@@ -6,12 +6,22 @@ document.getElementById('yesButton').addEventListener('click', function () {
   createRoses();
   createBouquets();
   createCandy();
+
+  // Remove animations after 30 seconds
+  setTimeout(() => {
+    removeAnimations();
+  }, 30000); // 30 seconds = 30000 milliseconds
 });
 
 document.getElementById('noButton').addEventListener('click', function () {
   const responseDiv = document.getElementById('response');
   responseDiv.textContent = 'Aww... 💔';
   createBrokenHearts();
+
+  // Remove animations after 30 seconds
+  setTimeout(() => {
+    removeAnimations();
+  }, 30000); // 30 seconds = 30000 milliseconds
 });
 
 function createHearts() {
@@ -72,4 +82,12 @@ function createBrokenHearts() {
     brokenHeart.style.transform = `scale(${Math.random() * 0.5 + 0.5})`;
     document.body.appendChild(brokenHeart);
   }
+}
+
+function removeAnimations() {
+  // Remove all elements with the classes 'heart', 'rose', 'bouquet', and 'candy'
+  const animations = document.querySelectorAll('.heart, .rose, .bouquet, .candy');
+  animations.forEach((animation) => {
+    animation.remove();
+  });
 }
