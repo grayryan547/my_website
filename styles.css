@@ -1,99 +1,101 @@
 /* styles.css */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Great Vibes', cursive;
-    background: linear-gradient(135deg, #ff7eb3, #ff758c);
-    color: white;
-    overflow: hidden; /* Prevent scrollbars */
-  }
-  
-  .container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  }
-  
-  .images img {
-    margin: 20px;
-    width: 100px;
-  }
-  
-  .rose {
-    animation: sway 3s infinite alternate;
-  }
-  
-  .heart {
-    animation: pulse 2s infinite;
-  }
-  
-  .bouquet {
-    animation: wiggle 4s infinite;
-  }
-  
-  .candy {
-    animation: shake 2s infinite;
-  }
-  
-  @keyframes sway {
-    0% { transform: rotate(-10deg); }
-    100% { transform: rotate(10deg); }
-  }
-  
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-  }
-  
-  @keyframes wiggle {
-    0% { transform: rotate(-5deg); }
-    50% { transform: rotate(5deg); }
-    100% { transform: rotate(-5deg); }
-  }
-  
-  @keyframes shake {
-    0% { transform: translateX(-5px); }
-    50% { transform: translateX(5px); }
-    100% { transform: translateX(-5px); }
-  }
-  
-  #valentineButton {
-    padding: 10px 20px;
-    font-size: 1.5rem;
-    background-color: #ff4d6d;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  #valentineButton:hover {
-    background-color: #ff1a40;
-  }
-  
-  #response {
-    margin-top: 20px;
-    font-size: 2rem;
-  }
-  
-  .heart-animation {
-    position: absolute;
-    font-size: 600px;
-    color: #ff4d6d;
-    opacity: 0.8;
-    filter: blur(2px);
-    z-index: -1;
-    animation: float 6s infinite;
-  }
-  
-  @keyframes float {
-    0% { transform: translateY(0) rotate(0deg) scale(1); }
-    50% { transform: translateY(-100px) rotate(180deg) scale(1.2); }
-    100% { transform: translateY(0) rotate(360deg) scale(1); }
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Great Vibes', cursive;
+  background: linear-gradient(135deg, #ff7eb3, #ff758c);
+  color: white;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.quotes p {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.button-container {
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  background-color: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 10px;
+}
+
+button:hover {
+  background-color: #ff1a40;
+}
+
+#response {
+  margin-top: 20px;
+  font-size: 2rem;
+}
+
+/* Animations */
+.heart {
+  position: absolute;
+  font-size: 60px;
+  color: #ff4d6d;
+  animation: float 6s infinite;
+}
+
+.rose {
+  position: absolute;
+  font-size: 60px;
+  color: #ff1a40;
+  animation: sway 3s infinite alternate;
+}
+
+.bouquet {
+  position: absolute;
+  font-size: 60px;
+  color: #ffcc00;
+  animation: wiggle 4s infinite;
+}
+
+.candy {
+  position: absolute;
+  font-size: 60px;
+  color: #ff69b4;
+  animation: shake 2s infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0) rotate(0deg) scale(1); }
+  50% { transform: translateY(-100px) rotate(180deg) scale(1.2); }
+  100% { transform: translateY(0) rotate(360deg) scale(1); }
+}
+
+@keyframes sway {
+  0% { transform: rotate(-10deg); }
+  100% { transform: rotate(10deg); }
+}
+
+@keyframes wiggle {
+  0% { transform: rotate(-5deg); }
+  50% { transform: rotate(5deg); }
+  100% { transform: rotate(-5deg); }
+}
+
+@keyframes shake {
+  0% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  100% { transform: translateX(-5px); }
+}
